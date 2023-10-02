@@ -137,13 +137,11 @@
             for (const varredor of listas) {
                 if (nome === '') {
                     varredor.style.fontWeight = 'normal';
-                    varredor.style.display = 'block';
                 }
                 else if (varredor.innerText.toLowerCase().startsWith(nome)) {
-                    varredor.style.display = 'block';
                     varredor.style.fontWeight = 'bold';
                 } else {
-                    varredor.style.display = 'none';
+                    varredor.style.fontWeight = 'normal';
                 }
             }
     }
