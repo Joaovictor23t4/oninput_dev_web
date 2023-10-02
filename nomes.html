@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomes</title>
+
+    <style>
+        input {
+            margin-left: 5px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seletor de Nomes</h1>
+
+    <form action="nomes.html">
+        <label for="">Informe um nome:</label>
+        <input type="text" name="campo_nome" id="nome" oninput="filtrar()">
+    </form>
+
+    <ul>
+        <li>João</li>
+        <li>Maria</li>
+        <li>Pedro</li>
+        <li>Ana</li>
+        <li>Carlos</li>
+        <li>Isabel</li>
+        <li>Luis</li>
+        <li>Sofia</li>
+        <li>Ricardo</li>
+        <li>Clara</li>
+        <li>David</li>
+        <li>Patrícia</li>
+        <li>Paulo</li>
+        <li>Camila</li>
+        <li>António</li>
+        <li>Laura</li>
+        <li>Miguel</li>
+        <li>Fernanda</li>
+        <li>Manuel</li>
+        <li>Juliana</li>
+        <li>Tomás</li>
+        <li>Raquel</li>
+        <li>Luís</li>
+        <li>Jéssica</li>
+        <li>Gabriel</li>
+        <li>Beatriz</li>
+        <li>Rui</li>
+        <li>Carolina</li>
+        <li>Gustavo</li>
+        <li>Diana</li>
+        <li>André</li>
+        <li>Lara</li>
+        <li>José</li>
+        <li>Isabela</li>
+        <li>Leonardo</li>
+        <li>Mariana</li>
+        <li>Eduardo</li>
+        <li>Cláudia</li>
+        <li>Francisco</li>
+        <li>Tatiana</li>
+        <li>Hugo</li>
+        <li>Vanessa</li>
+        <li>Daniel</li>
+        <li>Bianca</li>
+        <li>Roberto</li>
+        <li>Júlia</li>
+        <li>Rafael</li>
+        <li>Larissa</li>
+        <li>Fábio</li>
+        <li>Natália</li>
+        <li>Simão</li>
+        <li>Elisa</li>
+        <li>Marcelo</li>
+        <li>Alice</li>
+        <li>Vitor</li>
+        <li>Renata</li>
+        <li>Andréia</li>
+        <li>Adriano</li>
+        <li>Felipe</li>
+        <li>Isadora</li>
+        <li>William</li>
+        <li>Valentina</li>
+        <li>Lucas</li>
+        <li>Carla</li>
+        <li>Rodrigo</li>
+        <li>Lorena</li>
+        <li>Eduarda</li>
+        <li>Gabriela</li>
+        <li>Paulo</li>
+        <li>Amanda</li>
+        <li>Renato</li>
+        <li>Valéria</li>
+        <li>Marcos</li>
+        <li>Carolina</li>
+        <li>Pablo</li>
+        <li>Bruna</li>
+        <li>Antônio</li>
+        <li>Letícia</li>
+        <li>Marcus</li>
+        <li>Júlia</li>
+        <li>Rodrigo</li>
+        <li>Susana</li>
+        <li>Davi</li>
+        <li>Natalie</li>
+        <li>Luiz</li>
+        <li>Aline</li>
+        <li>Giovanni</li>
+        <li>Valéria</li>
+        <li>Gustavo</li>
+        <li>Marina</li>
+        <li>Rafael</li>
+        <li>Luciana</li>
+        <li>Felipe</li>
+        <li>Sara</li>
+        <li>Thiago</li>
+        <li>Joana</li>
+        <li>Vinícius</li>
+        <li>Jéssica</li>
+        <li>Fernando</li>
+        <li>Larissa</li>
+        <li>Camilo</li>
+        <li>Isabella</li>
+        <li>Alan</li>
+    </ul>
+
+    <script>
+        function filtrar() {
+            let nome = document.getElementById("nome").value.toLowerCase();
+            let listas = document.getElementsByTagName("li");
+
+            for (const varredor of listas) {
+                if (nome === '') {
+                    varredor.style.fontWeight = 'normal';
+                    varredor.style.display = 'block';
+                }
+                else if (varredor.innerText.toLowerCase().startsWith(nome)) {
+                    varredor.style.display = 'block';
+                    varredor.style.fontWeight = 'bold';
+                } else {
+                    varredor.style.display = 'none';
+                }
+            }
+    }
+    </script>
+</body>
+</html>
